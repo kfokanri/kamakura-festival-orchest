@@ -3,15 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>鎌倉祝祭管弦楽団 | 公式ホームページ</title>
-<meta name="description" content="鎌倉祝祭管弦楽団の公式ホームページ。団体紹介、演奏会情報、団員募集、お問い合わせ。">
+<title>鎌倉祝祭管弦楽団 | 第1回定期演奏会 2027年2月23日 鎌倉芸術館 小ホール</title>
+<meta name="description" content="鎌倉祝祭管弦楽団の公式ホームページ。第1回定期演奏会は2027年2月23日（火・祝）、鎌倉芸術館 小ホールにて。指揮・音楽監督は佐藤有斗。ホワイエで鎌倉よりみちマルシェも同時開催。">
 <meta name="theme-color" content="#0b1a36">
-<meta property="og:title" content="鎌倉祝祭管弦楽団">
-<meta property="og:description" content="鎌倉祝祭管弦楽団の公式ホームページ">
+<link rel="canonical" href="https://kamakurafestivalorchestra.jp/">
+<meta property="og:title" content="鎌倉祝祭管弦楽団 第1回定期演奏会">
+<meta property="og:description" content="2027年2月23日（火・祝）14:00開演 鎌倉芸術館 小ホール。ホワイエで鎌倉よりみちマルシェも同時開催。">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kamakurafestivalorchestra.jp/">
+<meta property="og:locale" content="ja_JP">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b1a36'/%3E%3Cg fill='none' stroke='%23c3a05f' stroke-width='1.4'%3E%3Ccircle cx='16' cy='16' r='12'/%3E%3Ccircle cx='16' cy='16' r='7.5'/%3E%3Ccircle cx='16' cy='16' r='3'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MusicEvent",
+  "name":"鎌倉祝祭管弦楽団 第1回定期演奏会",
+  "startDate":"2027-02-23T14:00:00+09:00",
+  "endDate":"2027-02-23T16:00:00+09:00",
+  "doorTime":"2027-02-23T13:00:00+09:00",
+  "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+  "location":{
+    "@type":"Place",
+    "name":"鎌倉芸術館 小ホール",
+    "address":{
+      "@type":"PostalAddress",
+      "postalCode":"247-0056",
+      "addressRegion":"神奈川県",
+      "addressLocality":"鎌倉市",
+      "streetAddress":"大船6-1-2",
+      "addressCountry":"JP"
+    }
+  },
+  "performer":[
+    {"@type":"Person","name":"佐藤有斗","jobTitle":"指揮・音楽監督"},
+    {"@type":"Person","name":"塩加井ななみ","jobTitle":"コンサートミストレス"}
+  ],
+  "organizer":{"@type":"Organization","name":"鎌倉祝祭管弦楽団","url":"https://kamakurafestivalorchestra.jp/"}
+}
+</script>
 <style>
 :root{
   --navy-900:#07122a;
@@ -31,6 +63,7 @@
   --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cg fill='none' stroke='%23c3a05f' stroke-width='.8'%3E%3Cg id='a'%3E%3Ccircle cx='0' cy='0' r='18'/%3E%3Ccircle cx='0' cy='0' r='13'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3C/g%3E%3Cg transform='translate(40 0)'%3E%3Ccircle r='18'/%3E%3Ccircle r='13'/%3E%3Ccircle r='8'/%3E%3C/g%3E%3Cg transform='translate(0 20)'%3E%3Ccircle r='18'/%3E%3Ccircle r='13'/%3E%3Ccircle r='8'/%3E%3C/g%3E%3Cg transform='translate(40 20)'%3E%3Ccircle r='18'/%3E%3Ccircle r='13'/%3E%3Ccircle r='8'/%3E%3C/g%3E%3Cg transform='translate(20 10)'%3E%3Ccircle r='18'/%3E%3Ccircle r='13'/%3E%3Ccircle r='8'/%3E%3C/g%3E%3Cg transform='translate(20 30)'%3E%3Ccircle r='18'/%3E%3Ccircle r='13'/%3E%3Ccircle r='8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{
   margin:0;font-family:var(--sans);font-weight:300;color:var(--ink);
@@ -76,10 +109,31 @@ a{color:inherit}
   display:block;font-family:var(--latin);font-size:.75rem;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;line-height:1.4;
 }
 
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;padding:.95em 2.2em;font-family:var(--serif);letter-spacing:.18em;
+  text-decoration:none;border:1px solid var(--gold);color:var(--gold-light);
+  transition:.3s;font-size:.95rem;line-height:1.6;text-align:center;background:none;
+}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--navy-900)}
+.btn-solid{background:var(--gold);color:var(--navy-900)}
+.btn-solid:hover,.btn-solid:focus-visible{background:var(--gold-light)}
+.btn-navy{color:var(--navy-800);border-color:var(--navy-800)}
+.btn-navy:hover,.btn-navy:focus-visible{background:var(--navy-800);color:var(--gold-light)}
+.btn-navy-solid{background:var(--navy-800);color:var(--gold-light);border-color:var(--navy-800)}
+.btn-navy-solid:hover,.btn-navy-solid:focus-visible{background:var(--navy-600);color:var(--white);border-color:var(--navy-600)}
+/* 無効（準備中）状態：公開後にJSで自動的に有効化されます */
+.is-disabled{pointer-events:none;cursor:not-allowed}
+.btn.is-disabled{
+  background:transparent!important;border-style:dashed;
+  border-color:rgba(255,255,255,.4);color:rgba(255,255,255,.7);
+}
+.btn-navy.is-disabled,.btn-navy-solid.is-disabled{border-color:var(--muted);color:var(--muted)}
+
 /* ---------- Hero ---------- */
 .hero{
   position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;
-  color:var(--white);padding:110px 20px 80px;overflow:hidden;
+  color:var(--white);padding:100px 20px 90px;overflow:hidden;
   background:
     radial-gradient(ellipse at 50% 30%,rgba(27,53,102,.9),transparent 70%),
     linear-gradient(180deg,var(--navy-800),var(--navy-900));
@@ -94,33 +148,56 @@ a{color:inherit}
   content:"";position:absolute;left:0;right:0;bottom:0;height:90px;
   background:linear-gradient(180deg,transparent,var(--ivory));
 }
-.hero-inner{position:relative;z-index:1}
+.hero-inner{position:relative;z-index:1;width:100%;max-width:620px}
 .hero-en{
-  font-family:var(--latin);font-style:italic;font-size:clamp(.95rem,3.4vw,1.2rem);
-  color:var(--gold-light);letter-spacing:.35em;margin:0 0 1.6rem;text-transform:uppercase;
+  font-family:var(--latin);font-style:italic;font-size:clamp(.9rem,3.4vw,1.2rem);
+  color:var(--gold-light);letter-spacing:.35em;margin:0 0 1.2rem;text-transform:uppercase;
 }
 .hero h1{
   font-family:var(--serif);font-weight:500;margin:0;
-  font-size:clamp(2rem,9vw,4rem);letter-spacing:.18em;line-height:1.5;
+  font-size:clamp(2rem,9vw,3.6rem);letter-spacing:.18em;line-height:1.5;
   text-shadow:0 2px 30px rgba(0,0,0,.4);
 }
 .hero h1 span{display:block}
 .ornament{
-  display:flex;align-items:center;justify-content:center;gap:14px;margin:2rem auto;
+  display:flex;align-items:center;justify-content:center;gap:14px;margin:1.4rem auto;
   color:var(--gold);
 }
 .ornament::before,.ornament::after{content:"";width:min(90px,18vw);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
 .ornament::after{transform:scaleX(-1)}
 .ornament i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);display:block}
-.hero-lead{font-family:var(--serif);font-size:clamp(.95rem,3.5vw,1.1rem);color:rgba(255,255,255,.88);margin:0 0 2.4rem}
-.btn{
-  display:inline-block;padding:.95em 2.4em;font-family:var(--serif);letter-spacing:.2em;
-  text-decoration:none;border:1px solid var(--gold);color:var(--gold-light);
-  transition:.3s;font-size:.95rem;
+.hero-lead{font-family:var(--serif);font-size:clamp(.95rem,3.5vw,1.1rem);color:rgba(255,255,255,.88);margin:0 0 1.8rem}
+
+.hero-info{
+  text-align:left;border:1px solid rgba(195,160,95,.6);background:rgba(7,18,42,.55);
+  padding:20px 18px 8px;position:relative;margin:0 auto 1.6rem;
 }
-.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--navy-900)}
-.btn-solid{background:var(--gold);color:var(--navy-900)}
-.btn-solid:hover,.btn-solid:focus-visible{background:var(--gold-light)}
+.hero-info::before,.hero-info::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--gold)}
+.hero-info::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.hero-info::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.hero-info-title{
+  font-family:var(--serif);font-weight:500;font-size:1.15rem;letter-spacing:.16em;
+  margin:0 0 .6rem;text-align:center;color:var(--white);
+}
+.hero-info dl{margin:0}
+.hero-info .row{display:grid;grid-template-columns:4.4em 1fr;gap:10px;padding:11px 0;border-top:1px solid rgba(255,255,255,.14);font-size:.95rem;line-height:1.75}
+.hero-info dt{font-family:var(--serif);color:var(--gold-light);font-weight:500}
+.hero-info dd{margin:0}
+.hero-info dd strong{font-family:var(--serif);font-weight:500;font-size:1.08rem;letter-spacing:.08em}
+.hero-info .sub{display:block;color:rgba(255,255,255,.78);font-size:.88rem}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-actions .btn{flex:1 1 220px}
+.hero-marche{
+  display:block;margin:22px auto 0;padding:14px 18px;text-decoration:none;text-align:left;
+  border:1px solid rgba(195,160,95,.5);background:rgba(255,255,255,.06);transition:.3s;
+}
+.hero-marche:hover,.hero-marche:focus-visible{background:rgba(195,160,95,.18)}
+.hero-marche .tag{
+  display:inline-block;font-family:var(--latin);font-size:.78rem;letter-spacing:.3em;
+  color:var(--navy-900);background:var(--gold);padding:0 .8em;margin-bottom:.4rem;text-transform:uppercase;
+}
+.hero-marche b{display:block;font-family:var(--serif);font-weight:500;letter-spacing:.14em;font-size:1.02rem}
+.hero-marche span.txt{display:block;font-size:.85rem;color:rgba(255,255,255,.8);line-height:1.7;margin-top:.2rem}
 
 /* ---------- Sections ---------- */
 section{padding:88px 0}
@@ -137,12 +214,42 @@ section{padding:88px 0}
 .dark .section-head h2{color:var(--white)}
 .dark .section-head .en{color:var(--gold)}
 
+/* 画像スロット：画像URLが設定されたときだけ表示されます */
+.photo{margin:0;position:relative}
+.photo img{width:100%;height:auto}
+.photo-person{aspect-ratio:4/5;border:1px solid var(--gold);padding:5px;background:rgba(255,255,255,.04)}
+.photo-person img{height:100%;object-fit:cover}
+.photo-flyer{max-width:360px;margin:0 auto 28px;border:1px solid var(--gold);padding:6px;background:rgba(255,255,255,.04)}
+.photo-logo{max-width:200px;margin:0 auto 20px;background:var(--white);padding:12px}
+.photo-logo img{height:auto;object-fit:contain}
+
+/* About */
 #about{background:var(--ivory)}
 .about-text{max-width:720px;margin:0 auto;text-align:center;font-family:var(--serif);font-size:1.02rem}
 .about-text p{margin:0 0 1.4em}
+.about-text p:last-child{margin-bottom:0}
+
+.leader{
+  max-width:720px;margin:44px auto 0;background:var(--white);
+  border:1px solid rgba(195,160,95,.55);padding:28px 22px;
+  display:flex;flex-direction:column;gap:22px;align-items:center;
+}
+.leader .photo-person{width:min(180px,60%);border-color:var(--gold-dark);background:var(--ivory)}
+.leader-body{width:100%}
+.leader-label{
+  display:block;font-family:var(--latin);letter-spacing:.3em;font-size:.82rem;color:var(--gold-dark);
+  text-transform:uppercase;margin-bottom:.4rem;text-align:center;
+}
+.leader blockquote{
+  margin:0;font-family:var(--serif);font-size:1rem;line-height:2;color:var(--ink);
+  padding:0;text-align:left;
+}
+.leader figcaption,.leader .cite{
+  display:block;margin-top:1rem;text-align:right;font-family:var(--serif);color:var(--navy-600);font-weight:500;
+}
 
 .profile{
-  max-width:720px;margin:44px auto 0;background:var(--white);
+  max-width:720px;margin:28px auto 0;background:var(--white);
   border:1px solid rgba(195,160,95,.55);padding:8px 24px;
 }
 .profile dl{margin:0}
@@ -166,7 +273,7 @@ section{padding:88px 0}
 #concerts .container{position:relative}
 .concert-card{
   max-width:760px;margin:0 auto 28px;border:1px solid rgba(195,160,95,.55);
-  background:rgba(255,255,255,.04);padding:34px 24px;position:relative;
+  background:rgba(255,255,255,.04);padding:34px 22px;position:relative;
 }
 .concert-card::before,.concert-card::after{
   content:"";position:absolute;width:18px;height:18px;border:1px solid var(--gold);
@@ -177,13 +284,48 @@ section{padding:88px 0}
   display:inline-block;font-family:var(--latin);letter-spacing:.3em;font-size:.8rem;
   color:var(--gold-light);text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:2px;margin-bottom:1rem;
 }
-.concert-card h3{font-family:var(--serif);font-weight:500;font-size:1.4rem;letter-spacing:.15em;margin:0 0 1.4rem}
+.concert-card h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;letter-spacing:.14em;margin:0 0 1.2rem;line-height:1.6}
+.concert-card h3 small{display:block;font-size:.85rem;letter-spacing:.12em;color:var(--gold-light);margin-top:.2rem}
 .concert-card dl{margin:0}
-.concert-card .row{display:grid;grid-template-columns:5.5em 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
+.concert-card .row{display:grid;grid-template-columns:6.4em 1fr;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.12)}
 .concert-card dt{color:var(--gold-light);font-family:var(--serif)}
 .concert-card dd{margin:0}
-.dark .tbd{color:rgba(255,255,255,.65);border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.05)}
+.concert-card p{margin:0 0 1em}
+.times{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:.3rem;font-size:.92rem;color:rgba(255,255,255,.85)}
+.times b{font-family:var(--serif);font-weight:500;color:var(--gold-light);margin-right:.4em}
+.dd-strong{font-family:var(--serif);font-size:1.1rem;letter-spacing:.08em}
+
+.people{display:grid;gap:14px;margin:0 0 22px}
+.person{
+  border:1px solid rgba(195,160,95,.4);padding:18px 16px;text-align:center;
+  display:flex;flex-direction:column;gap:12px;align-items:center;background:rgba(255,255,255,.03);
+}
+.person .photo-person{width:min(150px,55%)}
+.person-role{font-family:var(--serif);color:var(--gold-light);font-size:.85rem;letter-spacing:.16em;display:block}
+.person-name{font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:.14em;display:block;line-height:1.6}
+.person-aff{display:block;font-size:.85rem;color:rgba(255,255,255,.75)}
+
+.program{list-style:none;margin:0;padding:0}
+.program li{padding:4px 0 10px;line-height:1.8}
+.program .composer{display:block;font-size:.85rem;color:var(--gold-light);font-family:var(--serif);letter-spacing:.12em}
+.program .piece{font-family:var(--serif);font-size:1.05rem}
+
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+.price{border:1px solid rgba(195,160,95,.5);padding:16px 8px;text-align:center;background:rgba(255,255,255,.04)}
+.price .lbl{display:block;font-family:var(--serif);color:var(--gold-light);font-size:.9rem;letter-spacing:.16em}
+.price .amt{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:500;letter-spacing:.06em;line-height:1.5}
+.price .amt small{font-size:.9rem;margin-left:.1em}
+.cta-center{text-align:center}
+.cta-center .btn{min-width:min(100%,300px)}
+.notice{
+  margin:22px 0 0;padding:14px 16px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.85);
+  border-left:2px solid var(--gold);background:rgba(255,255,255,.05);
+}
+.notice p{margin:0}
+.notice p + p{margin-top:.5em}
 .note{text-align:center;font-size:.9rem;color:rgba(255,255,255,.7);margin-top:24px}
+.map-link{margin-top:22px;text-align:center}
+.map-link .btn{min-width:min(100%,300px)}
 
 /* Recruit */
 #recruit{background:var(--white)}
@@ -198,20 +340,31 @@ section{padding:88px 0}
 }
 .card h3::before{content:"";width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex:none}
 .card p{margin:0}
+.parts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.parts li{
+  font-family:var(--serif);font-size:1.1rem;letter-spacing:.14em;padding:.3em 1.1em;
+  background:var(--navy-800);color:var(--gold-light);border:1px solid var(--gold);
+}
+.card .small{font-size:.9rem;color:var(--muted);margin-top:.6rem}
 .recruit-cta{text-align:center;margin-top:44px}
-.btn-navy{color:var(--navy-800);border-color:var(--navy-800)}
-.btn-navy:hover,.btn-navy:focus-visible{background:var(--navy-800);color:var(--gold-light)}
 
 /* Contact */
 #contact{background:var(--ivory)}
 .contact-box{
   max-width:640px;margin:0 auto;text-align:center;background:var(--white);
-  border:1px solid rgba(195,160,95,.55);padding:44px 24px;
+  border:1px solid rgba(195,160,95,.55);padding:44px 22px;
 }
 .contact-box p{margin:0 0 1.2em;font-family:var(--serif)}
-.contact-list{list-style:none;margin:28px 0 0;padding:0;text-align:left;display:inline-block}
-.contact-list li{padding:6px 0}
-.contact-list b{font-family:var(--serif);font-weight:500;color:var(--navy-600);display:inline-block;min-width:6em}
+.mail-addr{font-family:var(--latin)!important;font-size:1.15rem;letter-spacing:.08em;color:var(--navy-600);word-break:break-all;margin:1rem 0 0!important}
+.contact-list{list-style:none;margin:28px 0 0;padding:20px 0 0;text-align:left;border-top:1px solid rgba(18,38,75,.1)}
+.contact-list li{padding:8px 0;display:grid;grid-template-columns:6.4em 1fr;gap:10px;align-items:baseline}
+.contact-list b{font-family:var(--serif);font-weight:500;color:var(--navy-600)}
+.contact-list a{word-break:break-all}
+.inline-link{color:var(--navy-800);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+.inline-link.is-disabled{
+  text-decoration:none;color:var(--muted);font-size:.9em;display:inline-block;
+  border:1px dashed rgba(107,116,136,.6);padding:0 .7em;border-radius:2px;background:rgba(107,116,136,.06);
+}
 
 /* Footer */
 .site-footer{background:var(--navy-900);color:rgba(255,255,255,.8);text-align:center;padding:54px 20px 36px;border-top:2px solid var(--gold-dark)}
@@ -219,7 +372,7 @@ section{padding:88px 0}
 .footer-nav{list-style:none;padding:0;margin:0 0 1.6rem;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px}
 .footer-nav a{text-decoration:none;font-family:var(--serif);font-size:.9rem;letter-spacing:.18em;color:var(--gold-light)}
 .footer-nav a:hover{color:var(--white)}
-.copyright{font-family:var(--latin);font-size:.9rem;letter-spacing:.15em;color:rgba(255,255,255,.55)}
+.copyright{font-family:var(--latin);font-size:.9rem;letter-spacing:.15em;color:rgba(255,255,255,.55);margin:0}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
@@ -228,6 +381,13 @@ section{padding:88px 0}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   .site-nav,.nav-toggle span{transition:none}
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width:380px){
+  .price .amt{font-size:1.4rem}
+  .profile .row,.concert-card .row{grid-template-columns:5.6em 1fr}
+  .contact-list li{grid-template-columns:1fr;gap:0}
 }
 
 /* ---------- Tablet / PC ---------- */
@@ -240,12 +400,19 @@ section{padding:88px 0}
   .site-nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transition:.3s}
   .site-nav a:hover::after{transform:scaleX(1)}
   .site-nav a small{font-size:.62rem}
+  .hero-inner{max-width:680px}
+  .hero-info{padding:24px 32px 10px}
+  .hero-info .row{grid-template-columns:5em 1fr}
   .cards{grid-template-columns:repeat(3,1fr)}
   .concert-card{padding:44px 48px}
+  .people{grid-template-columns:1fr 1fr}
   .profile{padding:12px 40px}
+  .leader{flex-direction:row;align-items:flex-start;padding:36px 40px;gap:32px}
+  .leader .photo-person{width:170px;flex:none}
   .contact-box{padding:56px 48px}
 }
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
@@ -272,14 +439,46 @@ section{padding:88px 0}
 </header>
 
 <main id="top">
-  <!-- Hero -->
+  <!-- Hero：いつ・どこで・誰が・チケットを最初に表示 -->
   <div class="hero">
     <div class="hero-inner">
       <p class="hero-en">Kamakura Festival Orchestra</p>
       <h1><span>鎌倉祝祭</span><span>管弦楽団</span></h1>
       <div class="ornament" aria-hidden="true"><i></i></div>
       <p class="hero-lead">鎌倉の街に、音楽の祝祭を。</p>
-      <a class="btn" href="#concerts">演奏会情報を見る</a>
+
+      <div class="hero-info">
+        <p class="hero-info-title">第1回定期演奏会</p>
+        <dl>
+          <div class="row">
+            <dt>いつ</dt>
+            <dd><strong>2027年2月23日（火・祝）</strong><span class="sub">13:00開場／14:00開演／16:00終演予定</span></dd>
+          </div>
+          <div class="row">
+            <dt>どこで</dt>
+            <dd><strong>鎌倉芸術館 小ホール</strong><span class="sub">JR大船駅から徒歩約10分</span></dd>
+          </div>
+          <div class="row">
+            <dt>誰が</dt>
+            <dd>指揮・音楽監督　佐藤有斗<span class="sub">コンサートミストレス　塩加井ななみ（群馬交響楽団）</span></dd>
+          </div>
+          <div class="row">
+            <dt>チケット</dt>
+            <dd>前売券 2,000円／当日券 2,500円<span class="sub">現在、販売準備中です</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
+        <a class="btn" href="#concerts">演奏会情報を見る</a>
+      </div>
+
+      <a class="hero-marche" href="#marche">
+        <span class="tag">同時開催</span>
+        <b>鎌倉よりみちマルシェ</b>
+        <span class="txt">小ホールのホワイエで、鎌倉のお店やクラフトが集います。ご利用には演奏会のチケットが必要です。</span>
+      </a>
     </div>
   </div>
 
@@ -292,17 +491,29 @@ section{padding:88px 0}
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
       <div class="about-text reveal">
-        <p>鎌倉祝祭管弦楽団は、鎌倉を拠点に活動するオーケストラです。</p>
-        <p><span class="tbd">団の理念・活動方針の紹介文は準備中です</span></p>
+        <p>鎌倉祝祭管弦楽団は、2026年に鎌倉で生まれた新しいオーケストラです。</p>
+        <p>鎌倉のさまざまな芸術とコラボレーションしながら、「音楽＋〇〇」というかたちで、毎年の定期演奏会を通して表現していきます。</p>
+        <p>最初のテーマは「絵画」。演目だけでなく、会場のホワイエでも、鎌倉に関係するアーティストの作品を展示する予定です。</p>
       </div>
+
+      <div class="leader reveal">
+        <figure class="photo photo-person" data-image="leader" data-alt="団長 正木涼の写真" hidden></figure>
+        <div class="leader-body">
+          <span class="leader-label">Message</span>
+          <blockquote>
+            「鎌倉で新しくオーケストラを作りました。さまざまな鎌倉の芸術とコラボレーションしながら、『音楽＋〇〇』を毎年の定期演奏会で表現していく予定です。最初のテーマは絵画。演目だけでなく、ホワイエでも鎌倉に関係するアーティストの作品を展示予定です。」
+          </blockquote>
+          <span class="cite">団長　正木涼</span>
+        </div>
+      </div>
+
       <div class="profile reveal">
         <dl>
           <div class="row"><dt>団名</dt><dd>鎌倉祝祭管弦楽団</dd></div>
-          <div class="row"><dt>結成</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>指揮者</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>団員数</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>練習日時</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>練習場所</dt><dd><span class="tbd">準備中</span></dd></div>
+          <div class="row"><dt>英語名</dt><dd>Kamakura Festival Orchestra</dd></div>
+          <div class="row"><dt>設立</dt><dd>2026年</dd></div>
+          <div class="row"><dt>団長</dt><dd>正木涼</dd></div>
+          <div class="row"><dt>指揮者・音楽監督</dt><dd>佐藤有斗</dd></div>
         </dl>
       </div>
     </div>
@@ -317,24 +528,144 @@ section{padding:88px 0}
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
 
-      <article class="concert-card reveal">
+      <!-- 第1回定期演奏会 -->
+      <article class="concert-card reveal" id="concert-1">
         <span class="badge">Next Concert</span>
-        <h3>次回演奏会</h3>
+        <h3>鎌倉祝祭管弦楽団<br>第1回定期演奏会</h3>
+
+        <figure class="photo photo-flyer" data-image="flyer" data-alt="第1回定期演奏会 チラシ" hidden></figure>
+
         <dl>
-          <div class="row"><dt>公演名</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>日時</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>会場</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>指揮</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>曲目</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>料金</dt><dd><span class="tbd">準備中</span></dd></div>
-          <div class="row"><dt>チケット</dt><dd><span class="tbd">準備中</span></dd></div>
+          <div class="row">
+            <dt>日時</dt>
+            <dd>
+              <span class="dd-strong">2027年2月23日（火・祝）</span>
+              <span class="times"><span><b>開場</b>13:00</span><span><b>開演</b>14:00</span><span><b>終演予定</b>16:00</span></span>
+            </dd>
+          </div>
+          <div class="row">
+            <dt>会場</dt>
+            <dd><span class="dd-strong">鎌倉芸術館 小ホール</span></dd>
+          </div>
+        </dl>
+
+        <div class="people" style="margin-top:22px">
+          <div class="person">
+            <figure class="photo photo-person" data-image="conductor" data-alt="指揮・音楽監督 佐藤有斗の写真" hidden></figure>
+            <div>
+              <span class="person-role">指揮・音楽監督</span>
+              <span class="person-name">佐藤有斗</span>
+            </div>
+          </div>
+          <div class="person">
+            <figure class="photo photo-person" data-image="mistress" data-alt="コンサートミストレス 塩加井ななみの写真" hidden></figure>
+            <div>
+              <span class="person-role">コンサートミストレス</span>
+              <span class="person-name">塩加井ななみ</span>
+              <span class="person-aff">（群馬交響楽団）</span>
+            </div>
+          </div>
+        </div>
+
+        <dl>
+          <div class="row">
+            <dt>曲目</dt>
+            <dd>
+              <ul class="program">
+                <li><span class="composer">ヒンデミット</span><span class="piece">交響曲「画家マティス」</span></li>
+                <li><span class="composer">ムソルグスキー／ラヴェル編曲</span><span class="piece">「展覧会の絵」（全曲）</span></li>
+              </ul>
+            </dd>
+          </div>
+          <div class="row">
+            <dt>ホワイエ展示</dt>
+            <dd>鎌倉に関係するアーティストの作品を展示予定です。</dd>
+          </div>
+          <div class="row">
+            <dt>主催</dt>
+            <dd>鎌倉祝祭管弦楽団</dd>
+          </div>
+          <div class="row">
+            <dt>後援</dt>
+            <dd>鎌倉市</dd>
+          </div>
         </dl>
       </article>
 
-      <article class="concert-card reveal">
-        <span class="badge">Past Concerts</span>
-        <h3>過去の演奏会</h3>
-        <p><span class="tbd">準備中</span></p>
+      <!-- チケット -->
+      <article class="concert-card reveal" id="ticket">
+        <span class="badge">Ticket</span>
+        <h3>チケット</h3>
+        <div class="price-grid">
+          <div class="price"><span class="lbl">前売券</span><span class="amt">2,000<small>円</small></span></div>
+          <div class="price"><span class="lbl">当日券</span><span class="amt">2,500<small>円</small></span></div>
+        </div>
+        <div class="cta-center">
+          <a class="btn btn-solid is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
+        </div>
+        <div class="notice">
+          <p>現在、チケットの販売準備を進めています。販売が開始され次第、こちらのボタンからご購入いただけます。</p>
+          <p>未就学児のご入場、年齢制限、親子室のご利用については検討中です。決まり次第、あらためてお知らせします。</p>
+        </div>
+      </article>
+
+      <!-- 鎌倉よりみちマルシェ -->
+      <article class="concert-card reveal" id="marche">
+        <span class="badge">Simultaneous Event</span>
+        <h3>鎌倉よりみちマルシェ<small>第1回定期演奏会と同時開催</small></h3>
+
+        <figure class="photo photo-logo" data-image="marcheLogo" data-alt="鎌倉よりみちマルシェ ロゴ" hidden></figure>
+
+        <p>地元・鎌倉のお店やクラフトが集うマルシェを、小ホールのホワイエで開催します。</p>
+        <dl>
+          <div class="row">
+            <dt>日程</dt>
+            <dd>2027年2月23日（火・祝）<br><span style="font-size:.88rem;color:rgba(255,255,255,.75)">第1回定期演奏会と同日に開催します。</span></dd>
+          </div>
+          <div class="row">
+            <dt>会場</dt>
+            <dd>鎌倉芸術館 小ホール　ホワイエ</dd>
+          </div>
+          <div class="row">
+            <dt>開催時間</dt>
+            <dd>演奏会の開演前・休憩中・終演後<br><span style="font-size:.88rem;color:rgba(255,255,255,.75)">（演奏中を除く）</span></dd>
+          </div>
+          <div class="row">
+            <dt>ご利用条件</dt>
+            <dd>マルシェのご利用には、演奏会の鑑賞チケットが必要です。</dd>
+          </div>
+          <div class="row">
+            <dt>マルシェ主催</dt>
+            <dd>Blue+</dd>
+          </div>
+        </dl>
+      </article>
+
+      <!-- アクセス -->
+      <article class="concert-card reveal" id="access">
+        <span class="badge">Access</span>
+        <h3>アクセス</h3>
+        <dl>
+          <div class="row">
+            <dt>会場</dt>
+            <dd><span class="dd-strong">鎌倉芸術館</span></dd>
+          </div>
+          <div class="row">
+            <dt>所在地</dt>
+            <dd>〒247-0056<br>神奈川県鎌倉市大船6-1-2</dd>
+          </div>
+          <div class="row">
+            <dt>電車</dt>
+            <dd>JR大船駅から徒歩約10分</dd>
+          </div>
+          <div class="row">
+            <dt>駐車場</dt>
+            <dd>最新の情報は、鎌倉芸術館の公式サイトでご確認ください。</dd>
+          </div>
+        </dl>
+        <div class="map-link">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E8%8A%B8%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
+        </div>
       </article>
     </div>
   </section>
@@ -347,23 +678,26 @@ section{padding:88px 0}
         <h2>団員募集</h2>
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
-      <p class="recruit-lead reveal">私たちと一緒に音楽をつくる仲間を募集します。<br><span class="tbd">募集の詳細は準備中です</span></p>
+      <p class="recruit-lead reveal">私たちと一緒に音楽をつくる仲間を募集します。<br>応募やご質問は、公式メールアドレスまでお気軽にご連絡ください。</p>
       <div class="cards">
         <div class="card reveal">
           <h3>募集パート</h3>
-          <p><span class="tbd">準備中</span></p>
+          <ul class="parts">
+            <li>ヴィオラ</li>
+            <li>チェロ</li>
+          </ul>
         </div>
         <div class="card reveal">
-          <h3>応募条件</h3>
-          <p><span class="tbd">準備中</span></p>
+          <h3>団費・練習日程</h3>
+          <p>詳細は、公式メールアドレスへお問い合わせください。</p>
         </div>
         <div class="card reveal">
-          <h3>入団までの流れ</h3>
-          <p><span class="tbd">準備中</span></p>
+          <h3>応募条件・入団まで</h3>
+          <p>詳細は、公式メールアドレスへお問い合わせください。</p>
         </div>
       </div>
       <div class="recruit-cta reveal">
-        <a class="btn btn-navy" href="#contact">入団に関するお問い合わせ</a>
+        <a class="btn btn-navy" href="mailto:kamafesorch@gmail.com?subject=%E5%9B%A3%E5%93%A1%E5%8B%9F%E9%9B%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">入団に関するお問い合わせ（メール）</a>
       </div>
     </div>
   </section>
@@ -377,11 +711,12 @@ section{padding:88px 0}
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
       <div class="contact-box reveal">
-        <p>演奏会、団員募集、その他のお問い合わせはこちらから。</p>
-        <p><span class="tbd">お問い合わせ方法は準備中です</span></p>
+        <p>演奏会、団員募集、その他のお問い合わせは、公式メールアドレスまでお送りください。</p>
+        <a class="btn btn-navy-solid" href="mailto:kamafesorch@gmail.com">メールでお問い合わせ</a>
+        <p class="mail-addr">kamafesorch@gmail.com</p>
         <ul class="contact-list">
-          <li><b>メール</b><span class="tbd">準備中</span></li>
-          <li><b>SNS</b><span class="tbd">準備中</span></li>
+          <li><b>公式サイト</b><a class="inline-link" href="https://kamakurafestivalorchestra.jp/">kamakurafestivalorchestra.jp</a></li>
+          <li><b>Instagram</b><a class="inline-link is-disabled" data-link="instagram" data-ready-label="公式Instagramを見る" aria-disabled="true" tabindex="-1">準備中</a></li>
         </ul>
       </div>
     </div>
@@ -400,7 +735,32 @@ section{padding:88px 0}
 </footer>
 
 <script>
+/* ==========================================================
+   サイト設定（ここだけ編集すれば更新できます）
+   ----------------------------------------------------------
+   ・ticketOpen を true にすると、チケットボタンが有効になります
+     （teketのページを公開したあとに切り替えてください）
+   ・instagramUrl に公式アカウントのURLを入れると、Instagramの
+     リンクが有効になります。空のままなら「準備中」と表示されます
+   ・images に画像のパス（またはURL）を入れると、該当の場所に
+     写真が表示されます。空のままなら画像欄ごと非表示になります
+       例）conductor: "images/conductor.jpg"
+   ========================================================== */
+var SITE_CONFIG = {
+  ticketOpen: false,
+  ticketUrl: "https://teket.jp/20229/80328",
+  instagramUrl: "",
+  images: {
+    conductor: "",   // 指揮者写真（佐藤有斗）
+    mistress:  "",   // コンサートミストレス写真（塩加井ななみ）
+    leader:    "",   // 団長写真（正木涼）
+    flyer:     "",   // 演奏会チラシ
+    marcheLogo:""    // 鎌倉よりみちマルシェ ロゴ
+  }
+};
+
 (function(){
+  /* ---- メニュー ---- */
   var btn=document.querySelector('.nav-toggle');
   var nav=document.getElementById('site-nav');
   function setOpen(open){
@@ -411,6 +771,35 @@ section{padding:88px 0}
   btn.addEventListener('click',function(){setOpen(!nav.classList.contains('open'))});
   nav.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false)});
 
+  /* ---- 外部リンクの有効化（準備中 → 公開後） ---- */
+  function enableLink(key,url){
+    if(!url)return;
+    document.querySelectorAll('[data-link="'+key+'"]').forEach(function(a){
+      a.href=url;
+      a.target='_blank';
+      a.rel='noopener noreferrer';
+      a.classList.remove('is-disabled');
+      a.removeAttribute('aria-disabled');
+      a.removeAttribute('tabindex');
+      var label=a.getAttribute('data-ready-label');
+      if(label)a.textContent=label;
+    });
+  }
+  if(SITE_CONFIG.ticketOpen)enableLink('ticket',SITE_CONFIG.ticketUrl);
+  enableLink('instagram',SITE_CONFIG.instagramUrl);
+
+  /* ---- 画像スロット（URLが設定され、読み込めたときだけ表示） ---- */
+  document.querySelectorAll('[data-image]').forEach(function(fig){
+    var url=(SITE_CONFIG.images||{})[fig.getAttribute('data-image')];
+    if(!url)return;
+    var img=new Image();
+    img.alt=fig.getAttribute('data-alt')||'';
+    img.decoding='async';
+    img.onload=function(){fig.appendChild(img);fig.hidden=false};
+    img.src=url;
+  });
+
+  /* ---- スクロール時のフェードイン ---- */
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){
