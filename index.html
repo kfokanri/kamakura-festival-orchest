@@ -131,7 +131,7 @@ a{color:inherit}
 
 /* ---------- Hero ---------- */
 .hero{
-  position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;
+  position:relative;display:grid;place-items:center;text-align:center;
   color:var(--white);padding:100px 20px 90px;overflow:hidden;
   background:
     radial-gradient(ellipse at 50% 30%,rgba(27,53,102,.9),transparent 70%),
@@ -244,6 +244,12 @@ section{padding:88px 0}
 .member-body p{margin:0 0 1em}
 .member-body p:last-child{margin-bottom:0}
 .member-body .member-affiliation{margin-top:-.7rem;color:var(--muted);font-size:.9rem}
+.greeting-more{margin-top:1.2rem}
+.greeting-more summary{width:fit-content;padding:.65em 1.2em;border:1px solid var(--gold-dark);color:var(--navy-800);cursor:pointer;font-family:var(--sans);font-size:.9rem;line-height:1.6}
+.greeting-more summary:hover,.greeting-more summary:focus-visible{background:var(--white);outline:2px solid var(--gold-dark);outline-offset:3px}
+.greeting-more[open] summary{margin-bottom:1.4rem}
+.greeting-more .read-less,.greeting-more[open] .read-more{display:none}
+.greeting-more[open] .read-less{display:inline}
 .leader blockquote{margin:0;padding:0;text-align:left}
 .leader .cite{display:block;margin-top:1rem;text-align:right;color:var(--navy-600);font-weight:500}
 
@@ -440,7 +446,7 @@ section{padding:88px 0}
 </header>
 
 <main id="top">
-  <!-- Hero：日時・会場・出演・チケットを最初に表示 -->
+  <!-- Hero：日時・会場・料金と購入導線 -->
   <div class="hero">
     <div class="hero-inner">
       <p class="hero-en">Kamakura Festival Orchestra</p>
@@ -454,19 +460,15 @@ section{padding:88px 0}
         <dl>
           <div class="row">
             <dt>日時</dt>
-            <dd><strong>2027年2月23日（火・祝）</strong><span class="sub">13:00開場／14:00開演／16:00終演予定</span></dd>
+            <dd><strong>2027年2月23日（火・祝）</strong><span class="sub">14:00開演</span></dd>
           </div>
           <div class="row">
             <dt>会場</dt>
-            <dd><strong>鎌倉芸術館 小ホール</strong><span class="sub">JR大船駅から徒歩約10分</span></dd>
-          </div>
-          <div class="row">
-            <dt>出演</dt>
-            <dd>指揮・音楽監督　佐藤有斗<span class="sub">コンサートミストレス　塩加井ななみ（群馬交響楽団）</span></dd>
+            <dd><strong>鎌倉芸術館 小ホール</strong></dd>
           </div>
           <div class="row">
             <dt>チケット</dt>
-            <dd>入場料 2,000円<span class="sub">未就学児のご入場はできません</span><span class="sub">現在、販売準備中です</span></dd>
+            <dd>入場料 2,000円</dd>
           </div>
         </dl>
       </div>
@@ -479,7 +481,6 @@ section{padding:88px 0}
       <a class="hero-marche" href="#marche">
         <span class="tag">同時開催</span>
         <b>鎌倉よりみちマルシェ</b>
-        <span class="txt">小ホールのホワイエで、鎌倉のお店やクラフトが集います。ご利用には演奏会のチケットが必要です。</span>
       </a>
     </div>
   </div>
@@ -504,8 +505,6 @@ section{padding:88px 0}
           <div class="row"><dt>団名</dt><dd>鎌倉祝祭管弦楽団</dd></div>
           <div class="row"><dt>英語名</dt><dd>Kamakura Festival Orchestra</dd></div>
           <div class="row"><dt>設立</dt><dd>2026年</dd></div>
-          <div class="row"><dt>団長</dt><dd>正木涼</dd></div>
-          <div class="row"><dt>指揮者・音楽監督</dt><dd>佐藤有斗</dd></div>
         </dl>
       </div>
     </div>
@@ -529,12 +528,15 @@ section{padding:88px 0}
             <p>そんな思いつきから、鎌倉祝祭管弦楽団は誕生しました。</p>
             <p>私は以前、大手楽器店が運営する学校で管楽器リペア科の講師を務め、2019年に鎌倉へ移住しました。</p>
             <p>以来、管楽器の修理を続けながら、からあげ屋、中華屋、プリン屋と、飲食の世界にも挑戦してきました。</p>
-            <p>楽器の専門知識、音楽業界で築いてきた人とのつながり、そして飲食の仕事で培った経験。これまでの活動を振り返ると、オーケストラの運営に活かせるものが意外とたくさんあります。</p>
-            <p>音楽家として、リペアマンとして、そして鎌倉でさまざまな仕事や人に出会ってきた一人として、今度はオーケストラという新しい形で、音楽の楽しさを広げていきたいと思っています。</p>
-            <p>せっかく鎌倉で始めるのなら、音楽だけで完結するのはもったいない。</p>
-            <p>歴史や文化、芸術、食、人との出会い。鎌倉のさまざまな魅力を音楽と掛け合わせ、演奏する人も聴く人も、毎年楽しみにできるような場を育てていきたいと思っています。</p>
-            <p>「いい音作ろう鎌倉楽譜」</p>
-            <p>どうぞ、鎌倉祝祭管弦楽団をよろしくお願いいたします。</p>
+            <details class="greeting-more">
+              <summary><span class="read-more">続きを読む</span><span class="read-less">閉じる</span></summary>
+              <p>楽器の専門知識、音楽業界で築いてきた人とのつながり、そして飲食の仕事で培った経験。これまでの活動を振り返ると、オーケストラの運営に活かせるものが意外とたくさんあります。</p>
+              <p>音楽家として、リペアマンとして、そして鎌倉でさまざまな仕事や人に出会ってきた一人として、今度はオーケストラという新しい形で、音楽の楽しさを広げていきたいと思っています。</p>
+              <p>せっかく鎌倉で始めるのなら、音楽だけで完結するのはもったいない。</p>
+              <p>歴史や文化、芸術、食、人との出会い。鎌倉のさまざまな魅力を音楽と掛け合わせ、演奏する人も聴く人も、毎年楽しみにできるような場を育てていきたいと思っています。</p>
+              <p>「いい音作ろう鎌倉楽譜」</p>
+              <p>どうぞ、鎌倉祝祭管弦楽団をよろしくお願いいたします。</p>
+            </details>
           </blockquote>
           <span class="cite">鎌倉祝祭管弦楽団<br>団長　正木 涼</span>
         </div>
@@ -652,7 +654,7 @@ section{padding:88px 0}
           <a class="btn btn-solid is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
         </div>
         <div class="notice">
-          <p>現在、チケットの販売準備を進めています。販売が開始され次第、こちらのボタンからご購入いただけます。</p>
+          <p data-ticket-status data-ready-label="チケットを販売しています。購入ボタンからお申し込みいただけます。">現在、チケットの販売準備を進めています。販売が開始され次第、こちらのボタンからご購入いただけます。</p>
           <p>未就学児のご入場はできません</p>
         </div>
       </article>
@@ -687,6 +689,9 @@ section{padding:88px 0}
             <dd>Blue+</dd>
           </div>
         </dl>
+        <div class="cta-center">
+          <a class="btn" href="https://www.instagram.com/blueplus0467/" target="_blank" rel="noopener noreferrer">鎌倉よりみちマルシェ 公式Instagram</a>
+        </div>
       </article>
 
       <!-- アクセス -->
@@ -837,7 +842,12 @@ var SITE_CONFIG = {
       if(label)a.textContent=label;
     });
   }
-  if(SITE_CONFIG.ticketOpen)enableLink('ticket',SITE_CONFIG.ticketUrl);
+  if(SITE_CONFIG.ticketOpen){
+    enableLink('ticket',SITE_CONFIG.ticketUrl);
+    document.querySelectorAll('[data-ticket-status]').forEach(function(el){
+      el.textContent=el.getAttribute('data-ready-label');
+    });
+  }
   enableLink('instagram',SITE_CONFIG.instagramUrl);
 
   /* ---- 画像スロット（URLが設定され、読み込めたときだけ表示） ---- */
