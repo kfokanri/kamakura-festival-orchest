@@ -136,10 +136,21 @@ a{color:inherit}
 .ornament::before,.ornament::after{content:"";width:min(90px,18vw);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
 .ornament::after{transform:scaleX(-1)}
 .ornament i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);display:block}
+/* ---------- Cover ---------- */
+.page-cover{position:relative;background:linear-gradient(180deg,var(--navy-800),var(--navy-900));color:var(--white);text-align:center;padding:40px 0 36px}
+.cover-en{font-family:var(--latin);font-size:.85rem;letter-spacing:.2em;color:var(--gold-light);margin:0 0 12px}
+.cover-copy h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,6vw,2.4rem);line-height:1.5;letter-spacing:.12em;margin:0}
+.cover-copy h1 span{display:inline-block}
+.cover-lead{font-family:var(--serif);font-size:.95rem;margin:14px 0 6px}
+.cover-motto{font-family:var(--serif);font-size:.88rem;color:var(--gold-light);margin:0}
+.page-cover .photo-flyer{max-width:640px;margin:0 auto}
+.page-cover.has-flyer{padding:28px 0}
+.page-cover.has-flyer .cover-copy{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
 /* ---------- Sections ---------- */
 main{padding-top:64px}
 section{padding:88px 0}
-main > section:first-child{padding-top:48px}
+main > .page-cover + section{padding-top:48px}
 .section-head{text-align:center;margin-bottom:52px}
 .section-head .en{
   font-family:var(--latin);font-size:.95rem;letter-spacing:.4em;color:var(--gold-dark);
@@ -220,7 +231,8 @@ main > section:first-child{padding-top:48px}
 .concert-card h2,.concert-card h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;letter-spacing:.14em;margin:0 0 1.2rem;line-height:1.6}
 .concert-card h2 small,.concert-card h3 small{display:block;font-size:.85rem;letter-spacing:.12em;color:var(--gold-light);margin-top:.2rem}
 .concert-card dl{margin:0}
-.concert-card .row{display:grid;grid-template-columns:6.4em 1fr;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.12)}
+.concert-card .row{display:grid;grid-template-columns:6.4em minmax(0,1fr);gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.12)}
+#concert-1 .row{grid-template-columns:11em minmax(0,1fr)}
 .concert-card dt{color:var(--gold-light);font-family:var(--serif)}
 .concert-card dd{margin:0}
 .concert-card p{margin:0 0 1em}
@@ -228,28 +240,11 @@ main > section:first-child{padding-top:48px}
 .times b{font-family:var(--serif);font-weight:500;color:var(--gold-light);margin-right:.4em}
 .dd-strong{font-family:var(--serif);font-size:1.1rem;letter-spacing:.08em}
 
-.people{display:grid;gap:14px;margin:0 0 22px}
-.person{
-  border:1px solid rgba(195,160,95,.4);padding:18px 16px;text-align:center;
-  display:flex;flex-direction:column;gap:12px;align-items:center;background:rgba(255,255,255,.03);
-}
-.person .photo-person{width:min(150px,55%)}
-.person-role{font-family:var(--serif);color:var(--gold-light);font-size:.85rem;letter-spacing:.16em;display:block}
-.person-name{font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:.14em;display:block;line-height:1.6}
-.person-aff{display:block;font-size:.85rem;color:rgba(255,255,255,.75)}
-
 .program{list-style:none;margin:0;padding:0}
 .program li{padding:4px 0 10px;line-height:1.8}
-.program .composer{display:block;font-size:.85rem;color:var(--gold-light);font-family:var(--serif);letter-spacing:.12em}
-.program .piece{font-family:var(--serif);font-size:1.05rem}
 
-.price-grid{display:grid;grid-template-columns:1fr;max-width:360px;margin:0 auto 22px}
-.price{border:1px solid rgba(195,160,95,.5);padding:16px 8px;text-align:center;background:rgba(255,255,255,.04)}
-.price .lbl{display:block;font-family:var(--serif);color:var(--gold-light);font-size:.9rem;letter-spacing:.16em}
-.price .amt{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:500;letter-spacing:.06em;line-height:1.5}
-.price .amt small{font-size:.9rem;margin-left:.1em}
+.ticket-price{line-height:1.8}
 .cta-center{text-align:center}
-.concert-cta{margin:22px 0}
 .cta-center .btn{min-width:min(100%,300px)}
 .notice{
   margin:22px 0 0;padding:14px 16px;font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.85);
@@ -319,11 +314,11 @@ main > section:first-child{padding-top:48px}
 
 /* ---------- Small phones ---------- */
 @media (max-width:480px){
+  #concert-1 .row{grid-template-columns:1fr;gap:4px}
   #access .row{grid-template-columns:1fr;gap:4px}
   .map-link .btn{padding-inline:1em;letter-spacing:.08em}
 }
 @media (max-width:380px){
-  .price .amt{font-size:1.4rem}
   .concert-card .row{grid-template-columns:5.6em 1fr}
   .contact-list li{grid-template-columns:1fr;gap:0}
 }
@@ -331,7 +326,7 @@ main > section:first-child{padding-top:48px}
 /* ---------- Tablet / PC ---------- */
 @media (min-width:820px){
   section{padding:120px 0}
-  main > section:first-child{padding-top:64px}
+  main > .page-cover + section{padding-top:64px}
   .nav-toggle{display:none}
   .site-nav{position:static;max-height:none;overflow:visible;background:none;border:0}
   .site-nav ul{display:flex;gap:clamp(10px,1.6vw,24px);padding:0}
@@ -341,7 +336,6 @@ main > section:first-child{padding-top:48px}
   .site-nav a small{font-size:.62rem}
   .cards{grid-template-columns:repeat(3,1fr)}
   .concert-card{padding:44px 48px}
-  .people{grid-template-columns:1fr 1fr}
   .member-profile{grid-template-columns:200px minmax(0,1fr);padding:36px 40px;gap:32px}
   .member-profile .photo-person{width:100%}
   .contact-box{padding:56px 48px}
@@ -372,69 +366,65 @@ main > section:first-child{padding-top:48px}
 </header>
 
 <main id="top">
+  <!-- チラシ未設定時はコンパクトな表紙を表示。images.flyer の設定後、読込成功時に置き換えます -->
+  <div class="page-cover">
+    <div class="container">
+      <div class="cover-copy">
+        <p class="cover-en">Kamakura Festival Orchestra</p>
+        <h1><span>鎌倉祝祭</span><span>管弦楽団</span></h1>
+        <p class="cover-lead">鎌倉の街に、音楽の祝祭を。</p>
+        <p class="cover-motto">いい音作ろう鎌倉楽譜</p>
+      </div>
+      <figure class="photo photo-flyer" data-image="flyer" data-alt="鎌倉祝祭管弦楽団 第1回定期演奏会 チラシ" hidden></figure>
+    </div>
+  </div>
+
   <!-- Concerts -->
   <section id="concerts" class="dark">
     <div class="container">
       <div class="section-head reveal">
         <span class="en">Concerts</span>
-        <h1>演奏会情報</h1>
+        <h2>演奏会情報</h2>
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
 
       <!-- 第1回定期演奏会 -->
       <article class="concert-card reveal" id="concert-1">
         <span class="badge">Next Concert</span>
-        <h2>鎌倉祝祭管弦楽団<br>第1回定期演奏会</h2>
-
-        <figure class="photo photo-flyer" data-image="flyer" data-alt="第1回定期演奏会 チラシ" hidden></figure>
+        <h3>鎌倉祝祭管弦楽団<br>第1回定期演奏会</h3>
 
         <dl>
           <div class="row">
             <dt>日時</dt>
-            <dd>
-              <span class="dd-strong">2027年2月23日（火・祝）</span>
-              <span class="times"><span><b>開場</b>13:00</span><span><b>開演</b>14:00</span><span><b>終演予定</b>16:00</span></span>
-            </dd>
+            <dd>2027年2月23日（火・祝）14:00開演</dd>
           </div>
           <div class="row">
-            <dt>会場</dt>
-            <dd><span class="dd-strong">鎌倉芸術館 小ホール</span></dd>
+            <dt>場所</dt>
+            <dd>鎌倉芸術館 小ホール</dd>
           </div>
-        </dl>
-
-        <div class="cta-center concert-cta">
-          <a class="btn" href="#ticket">チケット情報・購入へ</a>
-        </div>
-
-        <div class="people" style="margin-top:22px">
-          <div class="person">
-            <div>
-              <span class="person-role">指揮・音楽監督</span>
-              <a class="person-name" href="#conductor-profile">佐藤有斗</a>
-            </div>
-          </div>
-          <div class="person">
-            <div>
-              <span class="person-role">コンサートミストレス</span>
-              <a class="person-name" href="#mistress-profile">塩加井ななみ</a>
-              <span class="person-aff">（群馬交響楽団）</span>
-            </div>
-          </div>
-        </div>
-
-        <dl>
           <div class="row">
             <dt>曲目</dt>
             <dd>
               <ul class="program">
-                <li><span class="composer">ヒンデミット</span><span class="piece">交響曲「画家マティス」</span></li>
-                <li><span class="composer">ムソルグスキー／ラヴェル編曲</span><span class="piece">「展覧会の絵」（全曲）</span></li>
+                <li>ヒンデミット／交響曲《画家マティス》</li>
+                <li>ムソルグスキー／組曲《展覧会の絵》（ラヴェル編曲）</li>
               </ul>
             </dd>
           </div>
           <div class="row">
-            <dt>ホワイエ展示</dt>
-            <dd>鎌倉に関係するアーティストの作品を展示予定です。</dd>
+            <dt>指揮者</dt>
+            <dd>佐藤有斗</dd>
+          </div>
+          <div class="row">
+            <dt>コンサートミストレス</dt>
+            <dd>塩加井ななみ</dd>
+          </div>
+          <div class="row" id="ticket">
+            <dt>チケット</dt>
+            <dd>
+              <p class="ticket-price">2,000円（未就学児入場不可）</p>
+              <a class="btn btn-solid is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
+            </dd>
           </div>
           <div class="row">
             <dt>主催</dt>
@@ -444,29 +434,17 @@ main > section:first-child{padding-top:48px}
             <dt>後援</dt>
             <dd>鎌倉市</dd>
           </div>
+          <div class="row">
+            <dt>同時開催</dt>
+            <dd><a href="#marche">鎌倉よりみちマルシェ</a></dd>
+          </div>
         </dl>
-      </article>
-
-      <!-- チケット -->
-      <article class="concert-card reveal" id="ticket">
-        <span class="badge">Ticket</span>
-        <h2>チケット</h2>
-        <div class="price-grid">
-          <div class="price"><span class="lbl">入場料</span><span class="amt">2,000<small>円</small></span></div>
-        </div>
-        <div class="cta-center">
-          <a class="btn btn-solid is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
-        </div>
-        <div class="notice">
-          <p data-ticket-status data-ready-label="チケットを販売しています。購入ボタンからお申し込みいただけます。">現在、チケットの販売準備を進めています。販売が開始され次第、こちらのボタンからご購入いただけます。</p>
-          <p>未就学児のご入場はできません</p>
-        </div>
       </article>
 
       <!-- 鎌倉よりみちマルシェ -->
       <article class="concert-card reveal" id="marche">
         <span class="badge">Simultaneous Event</span>
-        <h2>鎌倉よりみちマルシェ<small>第1回定期演奏会と同時開催</small></h2>
+        <h3>鎌倉よりみちマルシェ<small>第1回定期演奏会と同時開催</small></h3>
 
         <figure class="photo photo-logo" data-image="marcheLogo" data-alt="鎌倉よりみちマルシェ ロゴ" hidden></figure>
 
@@ -501,7 +479,7 @@ main > section:first-child{padding-top:48px}
       <!-- アクセス -->
       <article class="concert-card reveal" id="access">
         <span class="badge">Access</span>
-        <h2>アクセス</h2>
+        <h3>アクセス</h3>
         <dl>
           <div class="row">
             <dt>会場</dt>
@@ -694,7 +672,7 @@ var SITE_CONFIG = {
     conductor: "images/指揮者プロフィール写真.jpg",
     mistress: "images/コンサートミストレスプロフィール写真.jpg",
     leader: "images/団長プロフィール写真.png",
-    flyer:     "",   // 演奏会チラシ
+    flyer:     "",   // 完成したチラシの画像パスを設定すると、読込成功時に冒頭の表紙と置き換え
     marcheLogo:"",   // 鎌倉よりみちマルシェ ロゴ
     orchestraLogo:"images/orchestra-rabbit-logo.png" // うさぎのオリジナルロゴ
   }
@@ -726,12 +704,7 @@ var SITE_CONFIG = {
       if(label)a.textContent=label;
     });
   }
-  if(SITE_CONFIG.ticketOpen){
-    enableLink('ticket',SITE_CONFIG.ticketUrl);
-    document.querySelectorAll('[data-ticket-status]').forEach(function(el){
-      el.textContent=el.getAttribute('data-ready-label');
-    });
-  }
+  if(SITE_CONFIG.ticketOpen)enableLink('ticket',SITE_CONFIG.ticketUrl);
   enableLink('instagram',SITE_CONFIG.instagramUrl);
 
   /* ---- 画像スロット（URLが設定され、読み込めたときだけ表示） ---- */
@@ -741,7 +714,13 @@ var SITE_CONFIG = {
     var img=new Image();
     img.alt=fig.getAttribute('data-alt')||'';
     img.decoding='async';
-    img.onload=function(){fig.appendChild(img);fig.hidden=false};
+    img.onload=function(){
+      fig.appendChild(img);
+      fig.hidden=false;
+      if(fig.getAttribute('data-image')==='flyer'){
+        fig.closest('.page-cover').classList.add('has-flyer');
+      }
+    };
     img.src=url;
   });
 
