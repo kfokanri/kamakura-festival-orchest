@@ -85,7 +85,6 @@ a{color:inherit}
   font-family:var(--serif);font-weight:500;font-size:1.05rem;color:var(--white);
   text-decoration:none;letter-spacing:.14em;display:flex;align-items:center;gap:.7em;
 }
-.brand-mark{width:26px;height:26px;flex:none}
 .nav-toggle{
   width:44px;height:44px;background:none;border:0;cursor:pointer;
   display:grid;place-content:center;gap:6px;
@@ -99,7 +98,7 @@ a{color:inherit}
   max-height:0;overflow:hidden;transition:max-height .4s ease;
   border-bottom:1px solid rgba(195,160,95,.35);
 }
-.site-nav.open{max-height:420px}
+.site-nav.open{max-height:min(520px,calc(100svh - 64px));overflow-y:auto}
 .site-nav ul{list-style:none;margin:0;padding:8px 20px 20px}
 .site-nav a{
   display:block;padding:14px 4px;color:var(--white);text-decoration:none;
@@ -167,6 +166,8 @@ a{color:inherit}
 .ornament::after{transform:scaleX(-1)}
 .ornament i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);display:block}
 .hero-lead{font-family:var(--serif);font-size:clamp(.95rem,3.5vw,1.1rem);color:rgba(255,255,255,.88);margin:0 0 1.8rem}
+.hero-motto{font-family:var(--serif);color:var(--gold-light);font-size:.95rem;line-height:1.8;margin:-.8rem 0 1.8rem}
+.hero-motto small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.16em}
 
 .hero-info{
   text-align:left;border:1px solid rgba(195,160,95,.6);background:rgba(7,18,42,.55);
@@ -229,24 +230,22 @@ section{padding:88px 0}
 .about-text p{margin:0 0 1.4em}
 .about-text p:last-child{margin-bottom:0}
 
-.leader{
-  max-width:720px;margin:44px auto 0;background:var(--white);
+.member-profile{
+  max-width:960px;margin:0 auto 32px;background:var(--ivory);
   border:1px solid rgba(195,160,95,.55);padding:28px 22px;
-  display:flex;flex-direction:column;gap:22px;align-items:center;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start;
 }
-.leader .photo-person{width:min(180px,60%);border-color:var(--gold-dark);background:var(--ivory)}
-.leader-body{width:100%}
-.leader-label{
-  display:block;font-family:var(--latin);letter-spacing:.3em;font-size:.82rem;color:var(--gold-dark);
-  text-transform:uppercase;margin-bottom:.4rem;text-align:center;
-}
-.leader blockquote{
-  margin:0;font-family:var(--serif);font-size:1rem;line-height:2;color:var(--ink);
-  padding:0;text-align:left;
-}
-.leader figcaption,.leader .cite{
-  display:block;margin-top:1rem;text-align:right;font-family:var(--serif);color:var(--navy-600);font-weight:500;
-}
+.member-profile:last-child{margin-bottom:0}
+.member-profile .photo-person{width:min(220px,75%);margin:0 auto;aspect-ratio:auto;border-color:var(--gold-dark);background:var(--white)}
+.member-profile .photo-person img{height:auto;object-fit:contain}
+.member-body{min-width:0;font-family:var(--serif);font-size:1rem;line-height:2;overflow-wrap:anywhere}
+.member-body .member-role{margin:0 0 .25rem;color:var(--gold-dark);font-size:.88rem;letter-spacing:.12em}
+.member-body h3{margin:0 0 1.2rem;font-weight:500;font-size:1.5rem;color:var(--navy-800);line-height:1.5}
+.member-body p{margin:0 0 1em}
+.member-body p:last-child{margin-bottom:0}
+.member-body .member-affiliation{margin-top:-.7rem;color:var(--muted);font-size:.9rem}
+.leader blockquote{margin:0;padding:0;text-align:left}
+.leader .cite{display:block;margin-top:1rem;text-align:right;color:var(--navy-600);font-weight:500}
 
 .profile{
   max-width:720px;margin:28px auto 0;background:var(--white);
@@ -310,7 +309,7 @@ section{padding:88px 0}
 .program .composer{display:block;font-size:.85rem;color:var(--gold-light);font-family:var(--serif);letter-spacing:.12em}
 .program .piece{font-family:var(--serif);font-size:1.05rem}
 
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+.price-grid{display:grid;grid-template-columns:1fr;max-width:360px;margin:0 auto 22px}
 .price{border:1px solid rgba(195,160,95,.5);padding:16px 8px;text-align:center;background:rgba(255,255,255,.04)}
 .price .lbl{display:block;font-family:var(--serif);color:var(--gold-light);font-size:.9rem;letter-spacing:.16em}
 .price .amt{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:500;letter-spacing:.06em;line-height:1.5}
@@ -324,7 +323,7 @@ section{padding:88px 0}
 .notice p{margin:0}
 .notice p + p{margin-top:.5em}
 .note{text-align:center;font-size:.9rem;color:rgba(255,255,255,.7);margin-top:24px}
-.map-link{margin-top:22px;text-align:center}
+.map-link{margin-top:22px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
 .map-link .btn{min-width:min(100%,300px)}
 
 /* Recruit */
@@ -384,6 +383,10 @@ section{padding:88px 0}
 }
 
 /* ---------- Small phones ---------- */
+@media (max-width:480px){
+  #access .row{grid-template-columns:1fr;gap:4px}
+  .map-link .btn{padding-inline:1em;letter-spacing:.08em}
+}
 @media (max-width:380px){
   .price .amt{font-size:1.4rem}
   .profile .row,.concert-card .row{grid-template-columns:5.6em 1fr}
@@ -395,7 +398,7 @@ section{padding:88px 0}
   section{padding:120px 0}
   .nav-toggle{display:none}
   .site-nav{position:static;max-height:none;overflow:visible;background:none;border:0}
-  .site-nav ul{display:flex;gap:30px;padding:0}
+  .site-nav ul{display:flex;gap:clamp(10px,1.6vw,24px);padding:0}
   .site-nav a{border:0;padding:8px 2px;font-size:.92rem;text-align:center;position:relative}
   .site-nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--gold);transform:scaleX(0);transition:.3s}
   .site-nav a:hover::after{transform:scaleX(1)}
@@ -407,8 +410,8 @@ section{padding:88px 0}
   .concert-card{padding:44px 48px}
   .people{grid-template-columns:1fr 1fr}
   .profile{padding:12px 40px}
-  .leader{flex-direction:row;align-items:flex-start;padding:36px 40px;gap:32px}
-  .leader .photo-person{width:170px;flex:none}
+  .member-profile{grid-template-columns:200px minmax(0,1fr);padding:36px 40px;gap:32px}
+  .member-profile .photo-person{width:100%}
   .contact-box{padding:56px 48px}
 }
 </style>
@@ -419,9 +422,6 @@ section{padding:88px 0}
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="鎌倉祝祭管弦楽団 トップへ">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" stroke="#c3a05f" stroke-width="1.2" aria-hidden="true">
-        <circle cx="16" cy="16" r="14"/><circle cx="16" cy="16" r="9"/><circle cx="16" cy="16" r="4"/>
-      </svg>
       鎌倉祝祭管弦楽団
     </a>
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
@@ -430,6 +430,7 @@ section{padding:88px 0}
     <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
       <ul>
         <li><a href="#about">団体紹介<small>About</small></a></li>
+        <li><a href="#members">メンバー紹介<small>Members</small></a></li>
         <li><a href="#concerts">演奏会情報<small>Concerts</small></a></li>
         <li><a href="#recruit">団員募集<small>Recruit</small></a></li>
         <li><a href="#contact">お問い合わせ<small>Contact</small></a></li>
@@ -439,32 +440,33 @@ section{padding:88px 0}
 </header>
 
 <main id="top">
-  <!-- Hero：いつ・どこで・誰が・チケットを最初に表示 -->
+  <!-- Hero：日時・会場・出演・チケットを最初に表示 -->
   <div class="hero">
     <div class="hero-inner">
       <p class="hero-en">Kamakura Festival Orchestra</p>
       <h1><span>鎌倉祝祭</span><span>管弦楽団</span></h1>
       <div class="ornament" aria-hidden="true"><i></i></div>
       <p class="hero-lead">鎌倉の街に、音楽の祝祭を。</p>
+      <p class="hero-motto"><small>私たちの合言葉</small>いい音作ろう鎌倉楽譜</p>
 
       <div class="hero-info">
         <p class="hero-info-title">第1回定期演奏会</p>
         <dl>
           <div class="row">
-            <dt>いつ</dt>
+            <dt>日時</dt>
             <dd><strong>2027年2月23日（火・祝）</strong><span class="sub">13:00開場／14:00開演／16:00終演予定</span></dd>
           </div>
           <div class="row">
-            <dt>どこで</dt>
+            <dt>会場</dt>
             <dd><strong>鎌倉芸術館 小ホール</strong><span class="sub">JR大船駅から徒歩約10分</span></dd>
           </div>
           <div class="row">
-            <dt>誰が</dt>
+            <dt>出演</dt>
             <dd>指揮・音楽監督　佐藤有斗<span class="sub">コンサートミストレス　塩加井ななみ（群馬交響楽団）</span></dd>
           </div>
           <div class="row">
             <dt>チケット</dt>
-            <dd>前売券 2,000円／当日券 2,500円<span class="sub">現在、販売準備中です</span></dd>
+            <dd>入場料 2,000円<span class="sub">未就学児のご入場はできません</span><span class="sub">現在、販売準備中です</span></dd>
           </div>
         </dl>
       </div>
@@ -491,20 +493,10 @@ section{padding:88px 0}
         <div class="ornament" aria-hidden="true"><i></i></div>
       </div>
       <div class="about-text reveal">
+        <figure class="photo photo-logo" data-image="orchestraLogo" data-alt="鎌倉祝祭管弦楽団のうさぎのオリジナルロゴ" hidden></figure>
         <p>鎌倉祝祭管弦楽団は、2026年に鎌倉で生まれた新しいオーケストラです。</p>
-        <p>鎌倉のさまざまな芸術とコラボレーションしながら、「音楽＋〇〇」というかたちで、毎年の定期演奏会を通して表現していきます。</p>
-        <p>最初のテーマは「絵画」。演目だけでなく、会場のホワイエでも、鎌倉に関係するアーティストの作品を展示する予定です。</p>
-      </div>
-
-      <div class="leader reveal">
-        <figure class="photo photo-person" data-image="leader" data-alt="団長 正木涼の写真" hidden></figure>
-        <div class="leader-body">
-          <span class="leader-label">Message</span>
-          <blockquote>
-            「鎌倉で新しくオーケストラを作りました。さまざまな鎌倉の芸術とコラボレーションしながら、『音楽＋〇〇』を毎年の定期演奏会で表現していく予定です。最初のテーマは絵画。演目だけでなく、ホワイエでも鎌倉に関係するアーティストの作品を展示予定です。」
-          </blockquote>
-          <span class="cite">団長　正木涼</span>
-        </div>
+        <p>歴史と文化が息づく鎌倉の、さまざまな魅力を掘り起こし、音楽を通じて新たな出会いや交流を生み出していきます。</p>
+        <p>毎年の定期演奏会では「音楽＋〇〇」をテーマに、音楽とさまざまな芸術・文化を組み合わせ、鎌倉ならではの祝祭のひとときをお届けします。</p>
       </div>
 
       <div class="profile reveal">
@@ -516,6 +508,65 @@ section{padding:88px 0}
           <div class="row"><dt>指揮者・音楽監督</dt><dd>佐藤有斗</dd></div>
         </dl>
       </div>
+    </div>
+  </section>
+
+  <!-- Members -->
+  <section id="members" aria-labelledby="members-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="en">Members</span>
+        <h2 id="members-title">メンバー紹介</h2>
+        <div class="ornament" aria-hidden="true"><i></i></div>
+      </div>
+      <article class="member-profile leader" id="leader-profile" aria-labelledby="leader-name">
+        <figure class="photo photo-person" data-image="leader" data-alt="団長 正木涼の写真" hidden></figure>
+        <div class="member-body">
+          <p class="member-role">団長挨拶</p>
+          <h3 id="leader-name">正木 涼</h3>
+          <blockquote>
+            <p>「自分でオーケストラを作ったら、きっと面白い！」</p>
+            <p>そんな思いつきから、鎌倉祝祭管弦楽団は誕生しました。</p>
+            <p>私は以前、大手楽器店が運営する学校で管楽器リペア科の講師を務め、2019年に鎌倉へ移住しました。</p>
+            <p>以来、管楽器の修理を続けながら、からあげ屋、中華屋、プリン屋と、飲食の世界にも挑戦してきました。</p>
+            <p>楽器の専門知識、音楽業界で築いてきた人とのつながり、そして飲食の仕事で培った経験。これまでの活動を振り返ると、オーケストラの運営に活かせるものが意外とたくさんあります。</p>
+            <p>音楽家として、リペアマンとして、そして鎌倉でさまざまな仕事や人に出会ってきた一人として、今度はオーケストラという新しい形で、音楽の楽しさを広げていきたいと思っています。</p>
+            <p>せっかく鎌倉で始めるのなら、音楽だけで完結するのはもったいない。</p>
+            <p>歴史や文化、芸術、食、人との出会い。鎌倉のさまざまな魅力を音楽と掛け合わせ、演奏する人も聴く人も、毎年楽しみにできるような場を育てていきたいと思っています。</p>
+            <p>「いい音作ろう鎌倉楽譜」</p>
+            <p>どうぞ、鎌倉祝祭管弦楽団をよろしくお願いいたします。</p>
+          </blockquote>
+          <span class="cite">鎌倉祝祭管弦楽団<br>団長　正木 涼</span>
+        </div>
+      </article>
+
+      <article class="member-profile" id="conductor-profile" aria-labelledby="conductor-name">
+        <figure class="photo photo-person" data-image="conductor" data-alt="指揮・音楽監督 佐藤有斗の写真" hidden></figure>
+        <div class="member-body">
+          <p class="member-role">指揮・音楽監督</p>
+          <h3 id="conductor-name">佐藤有斗</h3>
+
+          <p>1990年、群馬県前橋市生まれ。</p>
+          <p>3歳より母からピアノの手ほどきを受ける。高校入学と同時にコントラバスを始め、矢吹けさみ、徳島大藏、菅野明彦の各氏に師事。</p>
+          <p>獨協大学外国語学部英語学科に進学。在学中、獨協大学管弦楽団の学生指揮者を務め、定期演奏会を指揮するなど、指揮者としての活動を始める。また同大学を首席で卒業。</p>
+          <p>指揮を西脇秀治、大澤健一、水戸博之、高井優希、Luis Miguel Clemente、Jorma Panulaの各氏に師事。Douglas Bostock、Jorma Panulaらによる国内外の指揮マスタークラスに参加し、研鑽を積む。</p>
+          <p>より専門的に指揮法を学ぶため、武蔵野音楽大学別科指揮コースに進学し、同課程を修了。在学中の2022年、ポルトガル・ポルトで開催された「VI Atlantic Coast International Conducting Competition」に出場し、第1位を受賞。また、Hans Swarowsky International Conducting Competitionをはじめとする国際指揮コンクールにも招聘・参加するなど、国内外で経験を重ねている。</p>
+          <p>これまでに、獨協大学管弦楽団、Goose Philharmonic Orchestra、Atlantic Coast Orchestra（ポルトガル・ポルト）、Ushinawareta 2nen Orchestra、Bordighera Symphony Orchestra（イタリア・ボルディゲーラ）、郡山交響楽団、カマクラシックオーケストラ、どうした!?増子オーケストラ、県立前橋東高等学校吹奏楽部などを指揮。Clubhouse芸術祭への出演をはじめ、国内外で幅広く指揮活動を展開している。</p>
+          <p>オーケストラを中心に、室内楽、管楽合奏まで幅広い編成とレパートリーに取り組む。作品への深い理解を基盤に、演奏家との対話を重ねながら、作品の構造と表現の双方を引き出す音楽づくりを追求している。また、演奏会の企画・制作にも携わり、既存の枠組みにとらわれないプログラムや舞台表現にも積極的に取り組んでいる。</p>
+          <p>2019年よりKleine Harmonie Orchester正指揮者。</p>
+          <p>2026年より鎌倉祝祭管弦楽団音楽監督。</p>
+        </div>
+      </article>
+
+      <article class="member-profile" id="mistress-profile" aria-labelledby="mistress-name">
+        <figure class="photo photo-person" data-image="mistress" data-alt="コンサートミストレス 塩加井ななみの写真" hidden></figure>
+        <div class="member-body">
+          <p class="member-role">コンサートミストレス</p>
+          <h3 id="mistress-name">塩加井ななみ</h3>
+          <p class="member-affiliation">群馬交響楽団</p>
+          <p>神奈川県鎌倉市出身。4歳よりヴァイオリンを始め、7歳より恵藤久美子氏に師事。第26回かながわ音楽コンクール小学校高学年の部最優秀賞、第15回日本演奏家コンクール高校Aの部第2位及び横浜市教育委員会賞、第12回ルーマニア国際コンクール 弦楽器部門第3位。2021年より群馬交響楽団第二ヴァイオリン奏者。</p>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -551,17 +602,15 @@ section{padding:88px 0}
 
         <div class="people" style="margin-top:22px">
           <div class="person">
-            <figure class="photo photo-person" data-image="conductor" data-alt="指揮・音楽監督 佐藤有斗の写真" hidden></figure>
             <div>
               <span class="person-role">指揮・音楽監督</span>
-              <span class="person-name">佐藤有斗</span>
+              <a class="person-name" href="#conductor-profile">佐藤有斗</a>
             </div>
           </div>
           <div class="person">
-            <figure class="photo photo-person" data-image="mistress" data-alt="コンサートミストレス 塩加井ななみの写真" hidden></figure>
             <div>
               <span class="person-role">コンサートミストレス</span>
-              <span class="person-name">塩加井ななみ</span>
+              <a class="person-name" href="#mistress-profile">塩加井ななみ</a>
               <span class="person-aff">（群馬交響楽団）</span>
             </div>
           </div>
@@ -597,15 +646,14 @@ section{padding:88px 0}
         <span class="badge">Ticket</span>
         <h3>チケット</h3>
         <div class="price-grid">
-          <div class="price"><span class="lbl">前売券</span><span class="amt">2,000<small>円</small></span></div>
-          <div class="price"><span class="lbl">当日券</span><span class="amt">2,500<small>円</small></span></div>
+          <div class="price"><span class="lbl">入場料</span><span class="amt">2,000<small>円</small></span></div>
         </div>
         <div class="cta-center">
           <a class="btn btn-solid is-disabled" data-link="ticket" data-ready-label="チケットを購入する" aria-disabled="true" tabindex="-1">チケット販売準備中</a>
         </div>
         <div class="notice">
           <p>現在、チケットの販売準備を進めています。販売が開始され次第、こちらのボタンからご購入いただけます。</p>
-          <p>未就学児のご入場、年齢制限、親子室のご利用については検討中です。決まり次第、あらためてお知らせします。</p>
+          <p>未就学児のご入場はできません</p>
         </div>
       </article>
 
@@ -648,23 +696,24 @@ section{padding:88px 0}
         <dl>
           <div class="row">
             <dt>会場</dt>
-            <dd><span class="dd-strong">鎌倉芸術館</span></dd>
+            <dd><span class="dd-strong">鎌倉芸術館 小ホール</span></dd>
           </div>
           <div class="row">
             <dt>所在地</dt>
             <dd>〒247-0056<br>神奈川県鎌倉市大船6-1-2</dd>
           </div>
           <div class="row">
-            <dt>電車</dt>
-            <dd>JR大船駅から徒歩約10分</dd>
+            <dt>最寄駅</dt>
+            <dd><span class="dd-strong">大船駅</span><br>東口・笠間口から徒歩約10分</dd>
           </div>
           <div class="row">
             <dt>駐車場</dt>
-            <dd>最新の情報は、鎌倉芸術館の公式サイトでご確認ください。</dd>
+            <dd>駐車場の台数・料金・利用時間は、鎌倉芸術館の公式アクセス案内でご確認ください。</dd>
           </div>
         </dl>
         <div class="map-link">
           <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E8%8A%B8%E8%A1%93%E9%A4%A8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
+          <a class="btn" href="https://kamakura-kpac.jp/map/" target="_blank" rel="noopener noreferrer">公式アクセス案内・地図</a>
         </div>
       </article>
     </div>
@@ -685,6 +734,7 @@ section{padding:88px 0}
           <ul class="parts">
             <li>ヴィオラ</li>
             <li>チェロ</li>
+            <li>コントラバス</li>
           </ul>
         </div>
         <div class="card reveal">
@@ -727,6 +777,7 @@ section{padding:88px 0}
   <a class="brand" href="#top">鎌倉祝祭管弦楽団</a>
   <ul class="footer-nav">
     <li><a href="#about">団体紹介</a></li>
+    <li><a href="#members">メンバー紹介</a></li>
     <li><a href="#concerts">演奏会情報</a></li>
     <li><a href="#recruit">団員募集</a></li>
     <li><a href="#contact">お問い合わせ</a></li>
@@ -751,11 +802,12 @@ var SITE_CONFIG = {
   ticketUrl: "https://teket.jp/20229/80328",
   instagramUrl: "https://www.instagram.com/kamafesorch/",
   images: {
-    conductor: "images/指揮者プロフィール写真.jpg",
-mistress: "images/コンサートミストレスプロフィール写真.jpg",
-leader: "images/団長プロフィール写真.png",
+    conductor: "images/指揮者プロフィール写真.jpg",
+    mistress: "images/コンサートミストレスプロフィール写真.jpg",
+    leader: "images/団長プロフィール写真.png",
     flyer:     "",   // 演奏会チラシ
-    marcheLogo:""    // 鎌倉よりみちマルシェ ロゴ
+    marcheLogo:"",   // 鎌倉よりみちマルシェ ロゴ
+    orchestraLogo:"images/orchestra-rabbit-logo.png" // うさぎのオリジナルロゴ
   }
 };
 
